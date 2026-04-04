@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios FOR</title>
+  </head>
+  <body>
+    <h1>Exercicios For</h1>
+    <script>
+
+        let corpo = window.document.body;
+
+        corpo.style.background = "#331515";
+        corpo.style.color = "#fff";
+        corpo.style.textAlign = "center";
+        corpo.style.fontSize = "22px";
+        corpo.style.fontFamily = "Verdana";
+
+        function valores() {
+  let valor1 = Number(prompt("Digite o primeiro valor:"));
+  let valor2 = Number(prompt("Digite o segundo valor:"));
+
+  while (valor2 <= 0) {
+    valor2 = Number(prompt("Digite um valor maior que zero:"));
+  }
+
+  let divisao = valor1 / valor2;
+
+  document.writeln(`Resultado: ${divisao.toFixed(2)}`);
+}
+
+valores();
+
+    </script>
+  </body>
+</html>

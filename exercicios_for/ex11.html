@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios FOR</title>
+  </head>
+  <body>
+    <h1>Exercicios For</h1>
+    <script>
+
+        let corpo = window.document.body;
+
+        corpo.style.background = "#331515";
+        corpo.style.color = "#fff";
+        corpo.style.textAlign = "center";
+        corpo.style.fontSize = "22px";
+        corpo.style.fontFamily = "Verdana";
+
+        function intervalo() {
+  let dentro = 0;
+  let fora = 0;
+
+  for (let i = 1; i <= 10; i++) {
+    let numero = Number(prompt(`Digite o ${i}º número:`));
+
+    if (numero >= 24 && numero <= 42) {
+      dentro++;
+    } else {
+      fora++;
+    }
+  }
+
+  document.writeln(`Dentro do intervalo: ${dentro} <br>`);
+  document.writeln(`Fora do intervalo: ${fora}`);
+}
+
+intervalo();
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios FOR</title>
+  </head>
+  <body>
+    <h1>Exercicios For</h1>
+    <script>
+
+        let corpo = window.document.body;
+
+        corpo.style.background = "#331515";
+        corpo.style.color = "#fff";
+        corpo.style.textAlign = "center";
+        corpo.style.fontSize = "22px";
+        corpo.style.fontFamily = "Verdana";
+
+        function avaliacao() {
+  let soma = 0;
+
+  for (let i = 1; i <= 6; i++) {
+    let nota;
+
+    // validação da nota (0 a 10)
+    do {
+      nota = Number(prompt(`Digite a ${i}ª nota (0 a 10):`));
+      
+      if (nota < 0 || nota > 10 || isNaN(nota)) {
+        alert("Valor inválido! Digite uma nota entre 0 e 10.");
+      }
+
+    } while (nota < 0 || nota > 10 || isNaN(nota));
+
+    soma += nota;
+  }
+
+  let media = soma / 6;
+
+  alert(`Média final: ${media.toFixed(2)}`);
+}
+
+avaliacao();
+
+    </script>
+  </body>
+</html>

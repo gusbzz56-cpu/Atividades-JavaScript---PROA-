@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios FOR</title>
+  </head>
+  <body>
+    <h1>Exercicios For</h1>
+    <script>
+
+        let corpo = window.document.body;
+
+        corpo.style.background = "#331515";
+        corpo.style.color = "#fff";
+        corpo.style.textAlign = "center";
+        corpo.style.fontSize = "22px";
+        corpo.style.fontFamily = "Verdana";
+
+        function nota() {
+  let aprovados = 0;
+  let continuar;
+
+  do {
+    let nota1 = Number(prompt("Digite a primeira nota:"));
+    let nota2 = Number(prompt("Digite a segunda nota:"));
+
+    let media = (nota1 + nota2) / 2;
+
+    alert(`Média: ${media.toFixed(2)}`);
+
+    if (media >= 9.5) {
+      aprovados++;
+    }
+
+    continuar = prompt("Calcular outro aluno? (S/N)");
+  } while (continuar.toUpperCase() === "S");
+
+  alert(`Total de aprovados: ${aprovados}`);
+}
+
+nota();
+
+    </script>
+  </body>
+</html>
