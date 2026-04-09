@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercícios de Repetição</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .questao { border: 1px solid #ccc; padding: 16px; margin-bottom: 20px; }
+    .questao h3 { margin-top: 0; }
+    input { margin: 4px 0; display: block; }
+    button { margin-top: 8px; }
+    pre { background: #f4f4f4; padding: 10px; min-height: 30px; }
+  </style>
+</head>
+<body>
+
+  <h1>Exercícios de Repetição — While / Do-While / For</h1>
+
+  <!-- ====================================================== -->
+  <!--                  WHILE — Q1 a Q15                      -->
+  <!-- ====================================================== -->
+
+  <h2>— WHILE —</h2>
+
+  <!-- Q1: Exibir os números de 1 a 10 usando o loop while. -->
+  <div class="questao">
+    <h3>Q1 — Números de 1 a 10</h3>
+    <p>Exibir os números de 1 a 10 usando o loop <strong>while</strong>.</p>
+    <button onclick="q1()">Executar</button>
+    <pre id="s1"></pre>
+  </div>
+
+  <!-- Q2: Calcular a soma dos números de 1 a 100 usando o loop while. -->
+  <div class="questao">
+    <h3>Q2 — Soma de 1 a 100</h3>
+    <p>Calcular a soma dos números de 1 a 100 usando o loop <strong>while</strong>.</p>
+    <button onclick="q2()">Executar</button>
+    <pre id="s2"></pre>
+  </div>
+
+  <!-- Q3: Exibir os números pares de 1 a 50 usando o loop while. -->
+  <div class="questao">
+    <h3>Q3 — Números pares de 1 a 50</h3>
+    <p>Exibir os números pares de 1 a 50 usando o loop <strong>while</strong>.</p>
+    <button onclick="q3()">Executar</button>
+    <pre id="s3"></pre>
+  </div>
+
+  <!-- Q4: Ler 5 números inteiros e exibir a média aritmética usando o loop while. -->
+  <div class="questao">
+    <h3>Q4 — Média de 5 números</h3>
+    <p>Ler 5 números inteiros e exibir a média aritmética usando o loop <strong>while</strong>.</p>
+    <input type="number" id="q4n1" placeholder="Número 1">
+    <input type="number" id="q4n2" placeholder="Número 2">
+    <input type="number" id="q4n3" placeholder="Número 3">
+    <input type="number" id="q4n4" placeholder="Número 4">
+    <input type="number" id="q4n5" placeholder="Número 5">
+    <button onclick="q4()">Executar</button>
+    <pre id="s4"></pre>
+  </div>
+
+  <!-- Q5: Ler um número inteiro e exibir a tabuada até o décimo valor usando o loop while. -->
+  <div class="questao">
+    <h3>Q5 — Tabuada</h3>
+    <p>Ler um número inteiro e exibir a tabuada até o décimo valor usando o loop <strong>while</strong>.</p>
+    <input type="number" id="q5n" placeholder="Digite um número">
+    <button onclick="q5()">Executar</button>
+    <pre id="s5"></pre>
+  </div>
+
+  <!-- Q6: Ler um número inteiro positivo e exibir todos os seus divisores usando o loop while. -->
+  <div class="questao">
+    <h3>Q6 — Divisores</h3>
+    <p>Ler um número inteiro positivo e exibir todos os seus divisores usando o loop <strong>while</strong>.</p>
+    <input type="number" id="q6n" placeholder="Digite um número positivo">
+    <button onclick="q6()">Executar</button>
+    <pre id="s6"></pre>
+  </div>
+
+  <!-- Q7: Ler um número inteiro e verificar se ele é primo usando o loop while. -->
+  <div class="questao">
+    <h3>Q7 — Número primo</h3>
+    <p>Ler um número inteiro e verificar se ele é primo usando o loop <strong>while</strong>.</p>
+    <input type="number" id="q7n" placeholder="Digite um número">
+    <button onclick="q7()">Executar</button>
+    <pre id="s7"></pre>
+  </div>
+
+  <!-- Q8: Ler um número inteiro e exibir a sequência de Fibonacci até esse número usando o loop while. -->
+  <div class="questao">
+    <h3>Q8 — Fibonacci até N</h3>
+    <p>Ler um número inteiro e exibir a sequência de Fibonacci até esse número usando o loop <strong>while</strong>.</p>
+    <input type="number" id="q8n" placeholder="Digite um número">
+    <button onclick="q8()">Executar</button>
+    <pre id="s8"></pre>
+  </div>
+
+  <!-- Q9: Ler nome e idade de 5 pessoas e exibir a média das idades usando o loop while. -->
+  <div class="questao">
+    <h3>Q9 — Média de idades (5 pessoas)</h3>
+    <p>Ler nome e idade de 5 pessoas e exibir a média das idades usando o loop <strong>while</strong>.</p>
+    <input type="text"   id="q9nome1" placeholder="Nome 1">
+    <input type="number" id="q9idade1" placeholder="Idade 1">
+    <input type="text"   id="q9nome2" placeholder="Nome 2">
+    <input type="number" id="q9idade2" placeholder="Idade 2">
+    <input type="text"   id="q9nome3" placeholder="Nome 3">
+    <input type="number" id="q9idade3" placeholder="Idade 3">
+    <input type="text"   id="q9nome4" placeholder="Nome 4">
+    <input type="number" id="q9idade4" placeholder="Idade 4">
+    <input type="text"   id="q9nome5" placeholder="Nome 5">
+    <input type="number" id="q9idade5" placeholder="Idade 5">
+    <button onclick="q9()">Executar</button>
+    <pre id="s9"></pre>
+  </div>
+
+  <!-- Q10: Exibir os primeiros 20 números da sequência de Fibonacci usando o loop while. -->
+  <div class="questao">
+    <h3>Q10 — Primeiros 20 Fibonacci</h3>
+    <p>Exibir os primeiros 20 números da sequência de Fibonacci usando o loop <strong>while</strong>.</p>
+    <button onclick="q10()">Executar</button>
+    <pre id="s10"></pre>
+  </div>
+
+  <!-- Q11: Ler um número e exibir a soma de todos os pares entre 1 e ele usando o loop while. -->
+  <div class="questao">
+    <h3>Q11 — Soma dos pares até N</h3>
+    <p>Ler um número e exibir a soma de todos os números pares entre 1 e o número lido usando o loop <strong>while</strong>.</p>
+    <input type="number" id="q11n" placeholder="Digite um número">
+    <button onclick="q11()">Executar</button>
+    <pre id="s11"></pre>
+  </div>
+
+  <!-- Q12: Exibir os números ímpares de 1 a 50 usando o loop while. -->
+  <div class="questao">
+    <h3>Q12 — Ímpares de 1 a 50</h3>
+    <p>Exibir os números ímpares de 1 a 50 usando o loop <strong>while</strong>.</p>
+    <button onclick="q12()">Executar</button>
+    <pre id="s12"></pre>
+  </div>
+
+  <!-- Q13: Ler um número inteiro e exibir seus dígitos separadamente usando o loop while. -->
+  <div class="questao">
+    <h3>Q13 — Dígitos separados</h3>
+    <p>Ler um número inteiro e exibir seus dígitos separadamente usando o loop <strong>while</strong>.</p>
+    <input type="number" id="q13n" placeholder="Digite um número">
+    <button onclick="q13()">Executar</button>
+    <pre id="s13"></pre>
+  </div>
+
+  <!-- Q14: Calcular o fatorial de um número inteiro inserido pelo usuário usando o loop while. -->
+  <div class="questao">
+    <h3>Q14 — Fatorial</h3>
+    <p>Calcular o fatorial de um número inteiro inserido pelo usuário usando o loop <strong>while</strong>.</p>
+    <input type="number" id="q14n" placeholder="Digite um número">
+    <button onclick="q14()">Executar</button>
+    <pre id="s14"></pre>
+  </div>
+
+  <!-- Q15: Ler nome e idade de várias pessoas até que o nome "fim" seja informado e exibir a média das idades usando o loop while. -->
+  <div class="questao">
+    <h3>Q15 — Média de idades até "fim"</h3>
+    <p>Ler nome e idade de várias pessoas usando o loop <strong>while</strong> até que o nome "fim" seja informado. Ao final, exibir a média das idades.</p>
+    <input type="text"   id="q15nome"  placeholder='Nome (ou "fim" para encerrar)'>
+    <input type="number" id="q15idade" placeholder="Idade">
+    <button onclick="q15adicionar()">Adicionar pessoa</button>
+    <button onclick="q15calcular()">Calcular média</button>
+    <pre id="s15"></pre>
+  </div>
+
+  <!-- ====================================================== -->
+  <!--                 DO-WHILE — Q16 a Q30                   -->
+  <!-- ====================================================== -->
+
+  <h2>— DO-WHILE —</h2>
+
+  <!-- Q16: Exibir os números de 1 a 10 usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q16 — Números de 1 a 10</h3>
+    <p>Exibir os números de 1 a 10 usando o loop <strong>do-while</strong>.</p>
+    <button onclick="q16()">Executar</button>
+    <pre id="s16"></pre>
+  </div>
+
+  <!-- Q17: Calcular a soma dos números de 1 a 100 usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q17 — Soma de 1 a 100</h3>
+    <p>Calcular a soma dos números de 1 a 100 usando o loop <strong>do-while</strong>.</p>
+    <button onclick="q17()">Executar</button>
+    <pre id="s17"></pre>
+  </div>
+
+  <!-- Q18: Exibir os números pares de 1 a 50 usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q18 — Números pares de 1 a 50</h3>
+    <p>Exibir os números pares de 1 a 50 usando o loop <strong>do-while</strong>.</p>
+    <button onclick="q18()">Executar</button>
+    <pre id="s18"></pre>
+  </div>
+
+  <!-- Q19: Ler 5 números inteiros e exibir a média aritmética usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q19 — Média de 5 números</h3>
+    <p>Ler 5 números inteiros e exibir a média aritmética usando o loop <strong>do-while</strong>.</p>
+    <input type="number" id="q19n1" placeholder="Número 1">
+    <input type="number" id="q19n2" placeholder="Número 2">
+    <input type="number" id="q19n3" placeholder="Número 3">
+    <input type="number" id="q19n4" placeholder="Número 4">
+    <input type="number" id="q19n5" placeholder="Número 5">
+    <button onclick="q19()">Executar</button>
+    <pre id="s19"></pre>
+  </div>
+
+  <!-- Q20: Ler um número inteiro e exibir a tabuada até o décimo valor usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q20 — Tabuada</h3>
+    <p>Ler um número inteiro e exibir a tabuada até o décimo valor usando o loop <strong>do-while</strong>.</p>
+    <input type="number" id="q20n" placeholder="Digite um número">
+    <button onclick="q20()">Executar</button>
+    <pre id="s20"></pre>
+  </div>
+
+  <!-- Q21: Ler um número inteiro positivo e exibir todos os seus divisores usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q21 — Divisores</h3>
+    <p>Ler um número inteiro positivo e exibir todos os seus divisores usando o loop <strong>do-while</strong>.</p>
+    <input type="number" id="q21n" placeholder="Digite um número positivo">
+    <button onclick="q21()">Executar</button>
+    <pre id="s21"></pre>
+  </div>
+
+  <!-- Q22: Ler um número inteiro e verificar se ele é primo usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q22 — Número primo</h3>
+    <p>Ler um número inteiro e verificar se ele é primo usando o loop <strong>do-while</strong>.</p>
+    <input type="number" id="q22n" placeholder="Digite um número">
+    <button onclick="q22()">Executar</button>
+    <pre id="s22"></pre>
+  </div>
+
+  <!-- Q23: Ler um número inteiro e exibir a sequência de Fibonacci até esse número usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q23 — Fibonacci até N</h3>
+    <p>Ler um número inteiro e exibir a sequência de Fibonacci até esse número usando o loop <strong>do-while</strong>.</p>
+    <input type="number" id="q23n" placeholder="Digite um número">
+    <button onclick="q23()">Executar</button>
+    <pre id="s23"></pre>
+  </div>
+
+  <!-- Q24: Ler nome e idade de 5 pessoas e exibir a média das idades usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q24 — Média de idades (5 pessoas)</h3>
+    <p>Ler nome e idade de 5 pessoas e exibir a média das idades usando o loop <strong>do-while</strong>.</p>
+    <input type="text"   id="q24nome1"  placeholder="Nome 1">
+    <input type="number" id="q24idade1" placeholder="Idade 1">
+    <input type="text"   id="q24nome2"  placeholder="Nome 2">
+    <input type="number" id="q24idade2" placeholder="Idade 2">
+    <input type="text"   id="q24nome3"  placeholder="Nome 3">
+    <input type="number" id="q24idade3" placeholder="Idade 3">
+    <input type="text"   id="q24nome4"  placeholder="Nome 4">
+    <input type="number" id="q24idade4" placeholder="Idade 4">
+    <input type="text"   id="q24nome5"  placeholder="Nome 5">
+    <input type="number" id="q24idade5" placeholder="Idade 5">
+    <button onclick="q24()">Executar</button>
+    <pre id="s24"></pre>
+  </div>
+
+  <!-- Q25: Exibir os primeiros 20 números da sequência de Fibonacci usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q25 — Primeiros 20 Fibonacci</h3>
+    <p>Exibir os primeiros 20 números da sequência de Fibonacci usando o loop <strong>do-while</strong>.</p>
+    <button onclick="q25()">Executar</button>
+    <pre id="s25"></pre>
+  </div>
+
+  <!-- Q26: Ler um número e exibir a soma de todos os pares entre 1 e ele usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q26 — Soma dos pares até N</h3>
+    <p>Ler um número e exibir a soma de todos os números pares entre 1 e o número lido usando o loop <strong>do-while</strong>.</p>
+    <input type="number" id="q26n" placeholder="Digite um número">
+    <button onclick="q26()">Executar</button>
+    <pre id="s26"></pre>
+  </div>
+
+  <!-- Q27: Exibir os números ímpares de 1 a 50 usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q27 — Ímpares de 1 a 50</h3>
+    <p>Exibir os números ímpares de 1 a 50 usando o loop <strong>do-while</strong>.</p>
+    <button onclick="q27()">Executar</button>
+    <pre id="s27"></pre>
+  </div>
+
+  <!-- Q28: Ler um número inteiro e exibir seus dígitos separadamente usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q28 — Dígitos separados</h3>
+    <p>Ler um número inteiro e exibir seus dígitos separadamente usando o loop <strong>do-while</strong>.</p>
+    <input type="number" id="q28n" placeholder="Digite um número">
+    <button onclick="q28()">Executar</button>
+    <pre id="s28"></pre>
+  </div>
+
+  <!-- Q29: Calcular o fatorial de um número inteiro inserido pelo usuário usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q29 — Fatorial</h3>
+    <p>Calcular o fatorial de um número inteiro inserido pelo usuário usando o loop <strong>do-while</strong>.</p>
+    <input type="number" id="q29n" placeholder="Digite um número">
+    <button onclick="q29()">Executar</button>
+    <pre id="s29"></pre>
+  </div>
+
+  <!-- Q30: Ler nome e idade de várias pessoas até que o nome "fim" seja informado e exibir a média das idades usando o loop do-while. -->
+  <div class="questao">
+    <h3>Q30 — Média de idades até "fim"</h3>
+    <p>Ler nome e idade de várias pessoas usando o loop <strong>do-while</strong> até que o nome "fim" seja informado. Ao final, exibir a média das idades.</p>
+    <input type="text"   id="q30nome"  placeholder='Nome (ou "fim" para encerrar)'>
+    <input type="number" id="q30idade" placeholder="Idade">
+    <button onclick="q30adicionar()">Adicionar pessoa</button>
+    <button onclick="q30calcular()">Calcular média</button>
+    <pre id="s30"></pre>
+  </div>
+
+  <!-- ====================================================== -->
+  <!--                   FOR — Q31 a Q45                      -->
+  <!-- ====================================================== -->
+
+  <h2>— FOR —</h2>
+
+  <!-- Q31: Exibir os números de 1 a 10 usando o loop for. -->
+  <div class="questao">
+    <h3>Q31 — Números de 1 a 10</h3>
+    <p>Exibir os números de 1 a 10 usando o loop <strong>for</strong>.</p>
+    <button onclick="q31()">Executar</button>
+    <pre id="s31"></pre>
+  </div>
+
+  <!-- Q32: Calcular a soma dos números de 1 a 100 usando o loop for. -->
+  <div class="questao">
+    <h3>Q32 — Soma de 1 a 100</h3>
+    <p>Calcular a soma dos números de 1 a 100 usando o loop <strong>for</strong>.</p>
+    <button onclick="q32()">Executar</button>
+    <pre id="s32"></pre>
+  </div>
+
+  <!-- Q33: Exibir os números pares de 1 a 50 usando o loop for. -->
+  <div class="questao">
+    <h3>Q33 — Números pares de 1 a 50</h3>
+    <p>Exibir os números pares de 1 a 50 usando o loop <strong>for</strong>.</p>
+    <button onclick="q33()">Executar</button>
+    <pre id="s33"></pre>
+  </div>
+
+  <!-- Q34: Ler 5 números inteiros e exibir a média aritmética usando o loop for. -->
+  <div class="questao">
+    <h3>Q34 — Média de 5 números</h3>
+    <p>Ler 5 números inteiros e exibir a média aritmética usando o loop <strong>for</strong>.</p>
+    <input type="number" id="q34n1" placeholder="Número 1">
+    <input type="number" id="q34n2" placeholder="Número 2">
+    <input type="number" id="q34n3" placeholder="Número 3">
+    <input type="number" id="q34n4" placeholder="Número 4">
+    <input type="number" id="q34n5" placeholder="Número 5">
+    <button onclick="q34()">Executar</button>
+    <pre id="s34"></pre>
+  </div>
+
+  <!-- Q35: Ler um número inteiro e exibir a tabuada até o décimo valor usando o loop for. -->
+  <div class="questao">
+    <h3>Q35 — Tabuada</h3>
+    <p>Ler um número inteiro e exibir a tabuada até o décimo valor usando o loop <strong>for</strong>.</p>
+    <input type="number" id="q35n" placeholder="Digite um número">
+    <button onclick="q35()">Executar</button>
+    <pre id="s35"></pre>
+  </div>
+
+  <!-- Q36: Ler um número inteiro positivo e exibir todos os seus divisores usando o loop for. -->
+  <div class="questao">
+    <h3>Q36 — Divisores</h3>
+    <p>Ler um número inteiro positivo e exibir todos os seus divisores usando o loop <strong>for</strong>.</p>
+    <input type="number" id="q36n" placeholder="Digite um número positivo">
+    <button onclick="q36()">Executar</button>
+    <pre id="s36"></pre>
+  </div>
+
+  <!-- Q37: Ler um número inteiro e verificar se ele é primo usando o loop for. -->
+  <div class="questao">
+    <h3>Q37 — Número primo</h3>
+    <p>Ler um número inteiro e verificar se ele é primo usando o loop <strong>for</strong>.</p>
+    <input type="number" id="q37n" placeholder="Digite um número">
+    <button onclick="q37()">Executar</button>
+    <pre id="s37"></pre>
+  </div>
+
+  <!-- Q38: Ler um número inteiro e exibir a sequência de Fibonacci até esse número usando o loop for. -->
+  <div class="questao">
+    <h3>Q38 — Fibonacci até N</h3>
+    <p>Ler um número inteiro e exibir a sequência de Fibonacci até esse número usando o loop <strong>for</strong>.</p>
+    <input type="number" id="q38n" placeholder="Digite um número">
+    <button onclick="q38()">Executar</button>
+    <pre id="s38"></pre>
+  </div>
+
+  <!-- Q39: Ler nome e idade de 5 pessoas e exibir a média das idades usando o loop for. -->
+  <div class="questao">
+    <h3>Q39 — Média de idades (5 pessoas)</h3>
+    <p>Ler nome e idade de 5 pessoas e exibir a média das idades usando o loop <strong>for</strong>.</p>
+    <input type="text"   id="q39nome1"  placeholder="Nome 1">
+    <input type="number" id="q39idade1" placeholder="Idade 1">
+    <input type="text"   id="q39nome2"  placeholder="Nome 2">
+    <input type="number" id="q39idade2" placeholder="Idade 2">
+    <input type="text"   id="q39nome3"  placeholder="Nome 3">
+    <input type="number" id="q39idade3" placeholder="Idade 3">
+    <input type="text"   id="q39nome4"  placeholder="Nome 4">
+    <input type="number" id="q39idade4" placeholder="Idade 4">
+    <input type="text"   id="q39nome5"  placeholder="Nome 5">
+    <input type="number" id="q39idade5" placeholder="Idade 5">
+    <button onclick="q39()">Executar</button>
+    <pre id="s39"></pre>
+  </div>
+
+  <!-- Q40: Exibir os primeiros 20 números da sequência de Fibonacci usando o loop for. -->
+  <div class="questao">
+    <h3>Q40 — Primeiros 20 Fibonacci</h3>
+    <p>Exibir os primeiros 20 números da sequência de Fibonacci usando o loop <strong>for</strong>.</p>
+    <button onclick="q40()">Executar</button>
+    <pre id="s40"></pre>
+  </div>
+
+  <!-- Q41: Ler um número e exibir a soma de todos os pares entre 1 e ele usando o loop for. -->
+  <div class="questao">
+    <h3>Q41 — Soma dos pares até N</h3>
+    <p>Ler um número e exibir a soma de todos os números pares entre 1 e o número lido usando o loop <strong>for</strong>.</p>
+    <input type="number" id="q41n" placeholder="Digite um número">
+    <button onclick="q41()">Executar</button>
+    <pre id="s41"></pre>
+  </div>
+
+  <!-- Q42: Exibir os números ímpares de 50 a 1 usando o loop for. -->
+  <div class="questao">
+    <h3>Q42 — Ímpares de 50 a 1</h3>
+    <p>Exibir os números ímpares de 50 a 1 usando o loop <strong>for</strong>.</p>
+    <button onclick="q42()">Executar</button>
+    <pre id="s42"></pre>
+  </div>
+
+  <!-- Q43: Ler um número inteiro e exibir seus dígitos separadamente usando o loop for. -->
+  <div class="questao">
+    <h3>Q43 — Dígitos separados</h3>
+    <p>Ler um número inteiro e exibir seus dígitos separadamente usando o loop <strong>for</strong>.</p>
+    <input type="number" id="q43n" placeholder="Digite um número">
+    <button onclick="q43()">Executar</button>
+    <pre id="s43"></pre>
+  </div>
+
+  <!-- Q44: Calcular o fatorial de um número inteiro inserido pelo usuário usando o loop for. -->
+  <div class="questao">
+    <h3>Q44 — Fatorial</h3>
+    <p>Calcular o fatorial de um número inteiro inserido pelo usuário usando o loop <strong>for</strong>.</p>
+    <input type="number" id="q44n" placeholder="Digite um número">
+    <button onclick="q44()">Executar</button>
+    <pre id="s44"></pre>
+  </div>
+
+  <!-- Q45: Ler nome e idade de várias pessoas até que o nome "fim" seja informado e exibir a média das idades usando o loop for. -->
+  <div class="questao">
+    <h3>Q45 — Média de idades até "fim"</h3>
+    <p>Ler nome e idade de várias pessoas usando o loop <strong>for</strong> até que o nome "fim" seja informado. Ao final, exibir a média das idades.</p>
+    <input type="text"   id="q45nome"  placeholder='Nome (ou "fim" para encerrar)'>
+    <input type="number" id="q45idade" placeholder="Idade">
+    <button onclick="q45adicionar()">Adicionar pessoa</button>
+    <button onclick="q45calcular()">Calcular média</button>
+    <pre id="s45"></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
