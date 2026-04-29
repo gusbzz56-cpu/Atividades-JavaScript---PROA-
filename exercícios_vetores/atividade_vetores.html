@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atividade — Vetores & Matrizes</title>
+  <link rel="stylesheet" href="atividade_vetores.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <span class="header-tag">Instituto PROA · Java</span>
+      <h1>Vetores <span>&</span> Matrizes</h1>
+      <p class="subtitle">30 exercícios resolvidos com lógica básica</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Navegação por seção -->
+    <nav class="section-nav">
+      <button class="nav-btn active" data-section="vetores">Vetores (01–15)</button>
+      <button class="nav-btn" data-section="matrizes">Matrizes (16–30)</button>
+    </nav>
+
+    <!-- ======= SEÇÃO VETORES ======= -->
+    <section id="vetores" class="exercise-section active">
+
+      <!-- Q01 -->
+      <div class="card" id="q01">
+        <div class="card-header">
+          <span class="q-number">01</span>
+          <p>Leia 5 números inteiros e exiba-os na <strong>ordem inversa</strong>.</p>
+        </div>
+        <div class="input-group" id="inputs-01">
+          <label>Digite 5 números:</label>
+          <div class="inline-inputs" data-count="5" data-id="01"></div>
+        </div>
+        <button class="btn-run" onclick="run01()">Executar</button>
+        <div class="output" id="out-01"></div>
+      </div>
+
+      <!-- Q02 -->
+      <div class="card" id="q02">
+        <div class="card-header">
+          <span class="q-number">02</span>
+          <p>Leia 10 números inteiros e exiba a <strong>soma</strong> deles.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 10 números:</label>
+          <div class="inline-inputs" data-count="10" data-id="02"></div>
+        </div>
+        <button class="btn-run" onclick="run02()">Executar</button>
+        <div class="output" id="out-02"></div>
+      </div>
+
+      <!-- Q03 -->
+      <div class="card" id="q03">
+        <div class="card-header">
+          <span class="q-number">03</span>
+          <p>Leia 7 números inteiros e exiba a <strong>média aritmética</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 7 números:</label>
+          <div class="inline-inputs" data-count="7" data-id="03"></div>
+        </div>
+        <button class="btn-run" onclick="run03()">Executar</button>
+        <div class="output" id="out-03"></div>
+      </div>
+
+      <!-- Q04 -->
+      <div class="card" id="q04">
+        <div class="card-header">
+          <span class="q-number">04</span>
+          <p>Leia 5 números inteiros e exiba <strong>quantos são pares</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 5 números:</label>
+          <div class="inline-inputs" data-count="5" data-id="04"></div>
+        </div>
+        <button class="btn-run" onclick="run04()">Executar</button>
+        <div class="output" id="out-04"></div>
+      </div>
+
+      <!-- Q05 -->
+      <div class="card" id="q05">
+        <div class="card-header">
+          <span class="q-number">05</span>
+          <p>Leia 5 números inteiros e exiba o <strong>maior e o menor</strong> valor.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 5 números:</label>
+          <div class="inline-inputs" data-count="5" data-id="05"></div>
+        </div>
+        <button class="btn-run" onclick="run05()">Executar</button>
+        <div class="output" id="out-05"></div>
+      </div>
+
+      <!-- Q06 -->
+      <div class="card" id="q06">
+        <div class="card-header">
+          <span class="q-number">06</span>
+          <p>Leia 10 números inteiros e exiba-os em <strong>ordem crescente</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 10 números:</label>
+          <div class="inline-inputs" data-count="10" data-id="06"></div>
+        </div>
+        <button class="btn-run" onclick="run06()">Executar</button>
+        <div class="output" id="out-06"></div>
+      </div>
+
+      <!-- Q07 -->
+      <div class="card" id="q07">
+        <div class="card-header">
+          <span class="q-number">07</span>
+          <p>Leia 10 números inteiros e exiba <strong>quantos são positivos</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 10 números:</label>
+          <div class="inline-inputs" data-count="10" data-id="07"></div>
+        </div>
+        <button class="btn-run" onclick="run07()">Executar</button>
+        <div class="output" id="out-07"></div>
+      </div>
+
+      <!-- Q08 -->
+      <div class="card" id="q08">
+        <div class="card-header">
+          <span class="q-number">08</span>
+          <p>Leia 5 números inteiros e calcule a <strong>média dos pares e dos ímpares</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 5 números:</label>
+          <div class="inline-inputs" data-count="5" data-id="08"></div>
+        </div>
+        <button class="btn-run" onclick="run08()">Executar</button>
+        <div class="output" id="out-08"></div>
+      </div>
+
+      <!-- Q09 -->
+      <div class="card" id="q09">
+        <div class="card-header">
+          <span class="q-number">09</span>
+          <p>Leia 10 números e exiba a <strong>quantidade de positivos e negativos</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 10 números:</label>
+          <div class="inline-inputs" data-count="10" data-id="09"></div>
+        </div>
+        <button class="btn-run" onclick="run09()">Executar</button>
+        <div class="output" id="out-09"></div>
+      </div>
+
+      <!-- Q10 -->
+      <div class="card" id="q10">
+        <div class="card-header">
+          <span class="q-number">10</span>
+          <p>Leia 5 números inteiros e verifique se <strong>algum é igual a zero</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 5 números:</label>
+          <div class="inline-inputs" data-count="5" data-id="10"></div>
+        </div>
+        <button class="btn-run" onclick="run10()">Executar</button>
+        <div class="output" id="out-10"></div>
+      </div>
+
+      <!-- Q11 -->
+      <div class="card" id="q11">
+        <div class="card-header">
+          <span class="q-number">11</span>
+          <p>Leia 10 números e exiba a <strong>soma dos positivos e dos negativos</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 10 números:</label>
+          <div class="inline-inputs" data-count="10" data-id="11"></div>
+        </div>
+        <button class="btn-run" onclick="run11()">Executar</button>
+        <div class="output" id="out-11"></div>
+      </div>
+
+      <!-- Q12 -->
+      <div class="card" id="q12">
+        <div class="card-header">
+          <span class="q-number">12</span>
+          <p>Leia 5 números inteiros e exiba-os em <strong>ordem decrescente</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 5 números:</label>
+          <div class="inline-inputs" data-count="5" data-id="12"></div>
+        </div>
+        <button class="btn-run" onclick="run12()">Executar</button>
+        <div class="output" id="out-12"></div>
+      </div>
+
+      <!-- Q13 -->
+      <div class="card" id="q13">
+        <div class="card-header">
+          <span class="q-number">13</span>
+          <p>Leia 10 números e exiba <strong>quantos estão entre 10 e 50</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 10 números:</label>
+          <div class="inline-inputs" data-count="10" data-id="13"></div>
+        </div>
+        <button class="btn-run" onclick="run13()">Executar</button>
+        <div class="output" id="out-13"></div>
+      </div>
+
+      <!-- Q14 -->
+      <div class="card" id="q14">
+        <div class="card-header">
+          <span class="q-number">14</span>
+          <p>Leia 7 números inteiros e exiba <strong>apenas os pares</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 7 números:</label>
+          <div class="inline-inputs" data-count="7" data-id="14"></div>
+        </div>
+        <button class="btn-run" onclick="run14()">Executar</button>
+        <div class="output" id="out-14"></div>
+      </div>
+
+      <!-- Q15 -->
+      <div class="card" id="q15">
+        <div class="card-header">
+          <span class="q-number">15</span>
+          <p>Leia 5 nomes e exiba-os em <strong>ordem alfabética</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Digite 5 nomes:</label>
+          <div class="inline-inputs" data-count="5" data-id="15" data-type="text"></div>
+        </div>
+        <button class="btn-run" onclick="run15()">Executar</button>
+        <div class="output" id="out-15"></div>
+      </div>
+
+    </section>
+
+    <!-- ======= SEÇÃO MATRIZES ======= -->
+    <section id="matrizes" class="exercise-section">
+
+      <!-- Q16 -->
+      <div class="card" id="q16">
+        <div class="card-header">
+          <span class="q-number">16</span>
+          <p>Leia uma <strong>matriz 3×3</strong> e exiba na tela.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 3×3:</label>
+          <div class="matrix-inputs" data-rows="3" data-cols="3" data-id="16"></div>
+        </div>
+        <button class="btn-run" onclick="run16()">Executar</button>
+        <div class="output" id="out-16"></div>
+      </div>
+
+      <!-- Q17 -->
+      <div class="card" id="q17">
+        <div class="card-header">
+          <span class="q-number">17</span>
+          <p>Leia uma <strong>matriz 2×2</strong> e calcule a <strong>soma de todos os elementos</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 2×2:</label>
+          <div class="matrix-inputs" data-rows="2" data-cols="2" data-id="17"></div>
+        </div>
+        <button class="btn-run" onclick="run17()">Executar</button>
+        <div class="output" id="out-17"></div>
+      </div>
+
+      <!-- Q18 -->
+      <div class="card" id="q18">
+        <div class="card-header">
+          <span class="q-number">18</span>
+          <p>Leia uma <strong>matriz 3×3</strong> e exiba a <strong>soma da diagonal principal</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 3×3:</label>
+          <div class="matrix-inputs" data-rows="3" data-cols="3" data-id="18"></div>
+        </div>
+        <button class="btn-run" onclick="run18()">Executar</button>
+        <div class="output" id="out-18"></div>
+      </div>
+
+      <!-- Q19 -->
+      <div class="card" id="q19">
+        <div class="card-header">
+          <span class="q-number">19</span>
+          <p>Leia <strong>duas matrizes 2×2</strong> e exiba a <strong>soma entre elas</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Matriz A (2×2):</label>
+          <div class="matrix-inputs" data-rows="2" data-cols="2" data-id="19a"></div>
+          <label style="margin-top:8px">Matriz B (2×2):</label>
+          <div class="matrix-inputs" data-rows="2" data-cols="2" data-id="19b"></div>
+        </div>
+        <button class="btn-run" onclick="run19()">Executar</button>
+        <div class="output" id="out-19"></div>
+      </div>
+
+      <!-- Q20 -->
+      <div class="card" id="q20">
+        <div class="card-header">
+          <span class="q-number">20</span>
+          <p>Leia uma <strong>matriz 3×3</strong> e exiba o <strong>maior valor</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 3×3:</label>
+          <div class="matrix-inputs" data-rows="3" data-cols="3" data-id="20"></div>
+        </div>
+        <button class="btn-run" onclick="run20()">Executar</button>
+        <div class="output" id="out-20"></div>
+      </div>
+
+      <!-- Q21 -->
+      <div class="card" id="q21">
+        <div class="card-header">
+          <span class="q-number">21</span>
+          <p>Leia uma <strong>matriz 4×4</strong> e exiba a <strong>média aritmética</strong> dos elementos.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 4×4:</label>
+          <div class="matrix-inputs" data-rows="4" data-cols="4" data-id="21"></div>
+        </div>
+        <button class="btn-run" onclick="run21()">Executar</button>
+        <div class="output" id="out-21"></div>
+      </div>
+
+      <!-- Q22 -->
+      <div class="card" id="q22">
+        <div class="card-header">
+          <span class="q-number">22</span>
+          <p>Leia <strong>duas matrizes 2×2</strong> e exiba o <strong>produto</strong> entre elas.</p>
+        </div>
+        <div class="input-group">
+          <label>Matriz A (2×2):</label>
+          <div class="matrix-inputs" data-rows="2" data-cols="2" data-id="22a"></div>
+          <label style="margin-top:8px">Matriz B (2×2):</label>
+          <div class="matrix-inputs" data-rows="2" data-cols="2" data-id="22b"></div>
+        </div>
+        <button class="btn-run" onclick="run22()">Executar</button>
+        <div class="output" id="out-22"></div>
+      </div>
+
+      <!-- Q23 -->
+      <div class="card" id="q23">
+        <div class="card-header">
+          <span class="q-number">23</span>
+          <p>Leia uma <strong>matriz 3×3</strong> e exiba o <strong>menor valor</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 3×3:</label>
+          <div class="matrix-inputs" data-rows="3" data-cols="3" data-id="23"></div>
+        </div>
+        <button class="btn-run" onclick="run23()">Executar</button>
+        <div class="output" id="out-23"></div>
+      </div>
+
+      <!-- Q24 -->
+      <div class="card" id="q24">
+        <div class="card-header">
+          <span class="q-number">24</span>
+          <p>Leia uma <strong>matriz 3×3</strong> e verifique se ela é <strong>simétrica</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 3×3:</label>
+          <div class="matrix-inputs" data-rows="3" data-cols="3" data-id="24"></div>
+        </div>
+        <button class="btn-run" onclick="run24()">Executar</button>
+        <div class="output" id="out-24"></div>
+      </div>
+
+      <!-- Q25 -->
+      <div class="card" id="q25">
+        <div class="card-header">
+          <span class="q-number">25</span>
+          <p>Leia uma <strong>matriz 4×4</strong> e exiba a <strong>soma de cada coluna</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 4×4:</label>
+          <div class="matrix-inputs" data-rows="4" data-cols="4" data-id="25"></div>
+        </div>
+        <button class="btn-run" onclick="run25()">Executar</button>
+        <div class="output" id="out-25"></div>
+      </div>
+
+      <!-- Q26 -->
+      <div class="card" id="q26">
+        <div class="card-header">
+          <span class="q-number">26</span>
+          <p>Leia <strong>duas matrizes 2×2</strong> e verifique se são <strong>iguais</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Matriz A (2×2):</label>
+          <div class="matrix-inputs" data-rows="2" data-cols="2" data-id="26a"></div>
+          <label style="margin-top:8px">Matriz B (2×2):</label>
+          <div class="matrix-inputs" data-rows="2" data-cols="2" data-id="26b"></div>
+        </div>
+        <button class="btn-run" onclick="run26()">Executar</button>
+        <div class="output" id="out-26"></div>
+      </div>
+
+      <!-- Q27 -->
+      <div class="card" id="q27">
+        <div class="card-header">
+          <span class="q-number">27</span>
+          <p>Leia uma <strong>matriz 3×3</strong> e exiba o <strong>produto da diagonal secundária</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 3×3:</label>
+          <div class="matrix-inputs" data-rows="3" data-cols="3" data-id="27"></div>
+        </div>
+        <button class="btn-run" onclick="run27()">Executar</button>
+        <div class="output" id="out-27"></div>
+      </div>
+
+      <!-- Q28 -->
+      <div class="card" id="q28">
+        <div class="card-header">
+          <span class="q-number">28</span>
+          <p>Leia uma <strong>matriz 4×4</strong> e exiba o <strong>maior valor de cada linha</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 4×4:</label>
+          <div class="matrix-inputs" data-rows="4" data-cols="4" data-id="28"></div>
+        </div>
+        <button class="btn-run" onclick="run28()">Executar</button>
+        <div class="output" id="out-28"></div>
+      </div>
+
+      <!-- Q29 -->
+      <div class="card" id="q29">
+        <div class="card-header">
+          <span class="q-number">29</span>
+          <p>Leia uma <strong>matriz 3×3</strong> e verifique se é uma <strong>matriz identidade</strong>.</p>
+        </div>
+        <div class="input-group">
+          <label>Preencha a matriz 3×3:</label>
+          <div class="matrix-inputs" data-rows="3" data-cols="3" data-id="29"></div>
+        </div>
+        <button class="btn-run" onclick="run29()">Executar</button>
+        <div class="output" id="out-29"></div>
+      </div>
+
+      <!-- Q30 -->
+      <div class="card" id="q30">
+        <div class="card-header">
+          <span class="q-number">30</span>
+          <p>Leia <strong>duas matrizes 2×2</strong> e exiba a <strong>subtração</strong> entre elas.</p>
+        </div>
+        <div class="input-group">
+          <label>Matriz A (2×2):</label>
+          <div class="matrix-inputs" data-rows="2" data-cols="2" data-id="30a"></div>
+          <label style="margin-top:8px">Matriz B (2×2):</label>
+          <div class="matrix-inputs" data-rows="2" data-cols="2" data-id="30b"></div>
+        </div>
+        <button class="btn-run" onclick="run30()">Executar</button>
+        <div class="output" id="out-30"></div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="atividade_vetores.js"></script>
+</body>
+</html>

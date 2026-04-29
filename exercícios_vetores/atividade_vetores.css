@@ -1,0 +1,334 @@
+/* =============================================
+   atividade_vetores.css
+   Tema: Industrial/Técnico — preto, branco, amarelo
+   ============================================= */
+
+:root {
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  --border: #2e2e2e;
+  --accent: #f5c400;
+  --accent-dim: #b89200;
+  --text: #e8e8e8;
+  --text-muted: #888;
+  --success: #4caf50;
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 6px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ---- HEADER ---- */
+header {
+  border-bottom: 2px solid var(--accent);
+  padding: 40px 32px 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 39px,
+    rgba(245, 196, 0, 0.04) 39px,
+    rgba(245, 196, 0, 0.04) 40px
+  );
+  pointer-events: none;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-tag {
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #fff;
+}
+
+header h1 span {
+  color: var(--accent);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* ---- NAV ---- */
+.section-nav {
+  max-width: 900px;
+  margin: 28px auto 0;
+  padding: 0 32px;
+  display: flex;
+  gap: 8px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 9px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nav-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.nav-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+  font-weight: 700;
+}
+
+/* ---- MAIN ---- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 32px 60px;
+}
+
+/* ---- SECTIONS ---- */
+.exercise-section {
+  display: none;
+}
+
+.exercise-section.active {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---- CARD ---- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: #3e3e3e;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.q-number {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent);
+  min-width: 36px;
+  line-height: 1.2;
+}
+
+.card-header p {
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  padding-top: 3px;
+}
+
+.card-header strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---- INPUT GROUP ---- */
+.input-group {
+  margin-bottom: 14px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* ---- INLINE INPUTS (vetores) ---- */
+.inline-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.inline-inputs input {
+  width: 64px;
+  background: #0f0f0f;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 7px 8px;
+  text-align: center;
+  transition: border-color 0.15s;
+  outline: none;
+}
+
+.inline-inputs input[type="text"] {
+  width: 100px;
+}
+
+.inline-inputs input:focus {
+  border-color: var(--accent);
+}
+
+/* ---- MATRIX INPUTS ---- */
+.matrix-grid {
+  display: inline-grid;
+  gap: 5px;
+  border: 1px solid #3a3a3a;
+  border-radius: var(--radius);
+  padding: 10px;
+  background: #111;
+}
+
+.matrix-grid input {
+  width: 60px;
+  background: #0f0f0f;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 7px 6px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.matrix-grid input:focus {
+  border-color: var(--accent);
+}
+
+/* ---- BUTTON ---- */
+.btn-run {
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  color: #000;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 9px 20px;
+  text-transform: uppercase;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btn-run:hover {
+  background: #ffd11a;
+  transform: translateY(-1px);
+}
+
+.btn-run:active {
+  transform: translateY(0);
+}
+
+/* ---- OUTPUT ---- */
+.output {
+  margin-top: 12px;
+  background: #0a0a0a;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--success);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 10px 14px;
+  white-space: pre-wrap;
+  display: none;
+  animation: fadeIn 0.2s ease;
+}
+
+.output.visible {
+  display: block;
+}
+
+.output.error {
+  border-left-color: #f44336;
+  color: #f44336;
+}
+
+/* ---- MATRIX OUTPUT TABLE ---- */
+.matrix-out {
+  display: inline-grid;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.matrix-out span {
+  display: inline-block;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 3px;
+  color: var(--success);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 4px 10px;
+  text-align: center;
+  min-width: 40px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+  header { padding: 28px 18px 20px; }
+  main   { padding: 20px 18px 50px; }
+  .section-nav { padding: 0 18px; }
+  .inline-inputs input { width: 56px; }
+  .matrix-grid input   { width: 50px; }
+}
